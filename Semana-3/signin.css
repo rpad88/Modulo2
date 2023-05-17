@@ -1,0 +1,95 @@
+:root {
+    --main-bg-color: #fefefe;
+    --body-bg-color: #ECE8E8;
+    --input-border: #EBF0FA;
+    --gray: #B4B6C1;
+    --green: #00A335;
+    --green-hover: #0AC045;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background-color: var(--body-bg-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    height: 270px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 18px;
+    padding: 10px 1rem;
+    background-color: var(--main-bg-color);
+    border-radius: 6px;
+    filter: drop-shadow(0 0 .75rem var(--gray));
+    
+    /* border: 1px solid red; */
+}
+
+.form-header {
+    display: grid;
+    place-items: center;
+    padding: 1rem 0;
+}
+
+.form-header p {
+    color: var(--gray)
+}
+
+form input {
+    height: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border);
+    padding: 5px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--gray);
+    opacity: 1;
+}
+
+input[type="submit"] {
+    padding: 1rem 1rem;
+    height: auto;
+    background-color: var(--green);
+    color: var(--main-bg-color);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--green-hover);
+    transition: ease-in-out .3s;
+}
+
+main p {
+    color: var(--gray);
+}
+main a {
+    font-weight: bold;
+    color: var(--green);
+}
+
+main a:hover {
+    color: var(--green-hover);
+}

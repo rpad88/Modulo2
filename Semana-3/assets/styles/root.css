@@ -1,0 +1,15 @@
+:root {
+    --main-bg-color: #fefefe;
+    --body-bg-color: #ECE8E8;
+    --input-border: #EBF0FA;
+    --gray: #B4B6C1;
+    --green: #00A335;
+    --green-hover: #0AC045;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}

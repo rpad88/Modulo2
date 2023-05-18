@@ -1,18 +1,4 @@
-:root {
-    --main-bg-color: #fefefe;
-    --body-bg-color: #ECE8E8;
-    --input-border: #EBF0FA;
-    --gray: #B4B6C1;
-    --green: #00A335;
-    --green-hover: #0AC045;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+@import './root.css';
 
 body {
     height: 100vh;
@@ -26,6 +12,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(98%, 400px);
+    border: 1px solid #000;
 }
 
 form {
@@ -39,6 +27,7 @@ form {
     background-color: var(--main-bg-color);
     border-radius: 6px;
     filter: drop-shadow(0 0 .75rem var(--gray));
+    width: min(95%, 380px);
     
     /* border: 1px solid red; */
 }

@@ -10,26 +10,26 @@
 </head>
 <body>
     <main>
-        <form action="" name="formulario">
+        <form action="" name="formulario" aria-label="formulario-de-cadastro">
             <div class="form-header">
                 <h2>Sign Up</h2>
                 <p>Insira seus dados para criar uma conta</p>
             </div>
-            <input type="text" name="empresa" id="empresa" placeholder="Empresa">
-            <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
-            <input type="text" name="responsavel" id="responsavel" placeholder="responsavel">
+            <input type="text" name="empresa" id="empresa" placeholder="Empresa" aria-label="campo-empresa">
+            <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" aria-label="campo-cnpj">
+            <input type="text" name="responsavel" id="responsavel" placeholder="responsavel" aria-label="campo-responsavel">
             <div class="email">
-                <input type="email" name="email" id="email" placeholder="E-mail">
-                <input type="tel" name="telefone" placeholder="Telefone">
+                <input type="email" name="email" id="email" placeholder="E-mail" aria-label="campo-email">
+                <input type="tel" name="telefone" placeholder="Telefone" aria-label="campo-telefone">
             </div>
             <div class="password">
-                <input type="password" name="password" id="password" placeholder="Senha">
-                <input type="password" name="confirm" id="confirm" placeholder="Confirmar senha">
+                <input type="password" name="password" id="password" placeholder="Senha" aria-label="campo-senha">
+                <input type="password" name="confirm" id="confirm" placeholder="Confirmar senha" aria-label="campo-confirma-senha">
             </div>
 
-            <input type="submit" value="Criar conta">
+            <input type="submit" value="Criar conta" aria-label="botão-cadastrar">
         </form>
-        <p>Já possui uma conta? <a href="./src/signin.html">Realizar login</a></p>
+        <p>Já possui uma conta? <a href="./src/signin.html" aria-label="realizar-login">Realizar login</a></p>
     </main>
 </body>
 </html>

@@ -164,3 +164,8 @@ section.contato-formulario {
 .form .botao:hover {
     background-color: var(--btn-background-hover-1);
 }
+
+/* LOJAS LOCAIS */
+article {
+    background-color: #fff;
+}

@@ -1,0 +1,166 @@
+@import './root.css';
+@import './header.css';
+
+/* .container {
+    background-color: var(--black);
+} */
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+main {
+    display: block;
+    max-width: 1200px;
+    /* background-color: #111; */
+    /* border: 3px solid #fb1; */
+}
+.titulo-bg {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    height: 400px;
+    
+}
+
+.titulo {
+    background: url(../img/top-right.svg) no-repeat top right 20px;
+}
+
+.titulo p{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-2);
+}
+
+.titulo h1 {
+    font-size: 64px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.ponto {
+    font: 600 4rem/1.125 "Poppins", sans-serif
+}
+
+/* CONTATO */
+.contato {
+    background-color: transparent;
+    display: flex;
+}
+
+section.contato-dados {
+    display: block;
+    background: var(--black) url(../img/bottom-left.svg) no-repeat bottom 20px left 20px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    /* border: 1px solid #fff; */
+}
+
+section h2 {
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+section .contato-endereco {
+    margin-bottom: 32px;
+    padding-left: 28px;
+    background: url(../img/local.svg) no-repeat 0px 2px;
+}
+
+section .contato-meios a{
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 28px;
+}
+
+
+section .contato-meios a:first-child {
+    background: url(../img/email.svg) no-repeat 0px 2px;
+}
+
+section .contato-meios a:nth-child(2) {
+    margin-bottom: 32px;
+}
+
+section .contato-meios a:last-child {
+    background: url(../img/telefone.svg) no-repeat 0px 2px;
+    margin-bottom: 60px;
+}
+
+/* REDES SOCIAIS */
+section .contato-redes {
+    display: flex;
+    gap: 32px;
+    padding-left: 28px;
+    margin-bottom: 2rem;
+}
+
+/*  FORMULARIO  */
+section.contato-formulario {
+    border-radius: 0 5px 5px 0;
+    background: var(--text-1) url(../img/bottom-right.svg) no-repeat bottom 20px right 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form label {
+    display: block;
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    margin-bottom: 4px;
+}
+.form div {
+    box-sizing: border-box;
+}
+
+.form input,
+.form input[type="email"],
+.form textarea {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form .email {
+    grid-column: span 2;
+}
+
+.form .mensagem {
+    grid-column: span 2;
+}
+
+.form button {
+    grid-column: span 2;
+}
+
+.form .botao {
+    cursor: pointer;
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--btn-background-color-1);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: #332200;
+    font: 600 1.125rem/1.35 "Poppins", sans-serif;
+    max-width: max-content;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+.form .botao:hover {
+    background-color: var(--btn-background-hover-1);
+}

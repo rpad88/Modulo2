@@ -59,6 +59,10 @@ a {
     flex: 1;
 }
 
+.text-muted {
+    color: #b2b2b2 !important;
+}
+
 .content__login {
     display: flex;
     flex-direction: row;

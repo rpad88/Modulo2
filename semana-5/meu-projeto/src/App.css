@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.btn-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all .4s ease-in-out;
+}
+
+.btn-pesquisa button:hover{
+  cursor: pointer;
+  scale: 0.95;
+}
+
+.logo {
+  margin-top: 300px;
+}

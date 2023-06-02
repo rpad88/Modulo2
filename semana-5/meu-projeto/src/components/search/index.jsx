@@ -1,11 +1,3 @@
-import React from 'react'
-import './search.css'
+import Search from "./Search"
 
-export default function Search() {
-  return (
-    <div className='search'>
-      <input type="text" name="search" id="" placeholder='O que você procura?' />
-      <button type='submit'>Pesquisar</button>
-    </div>
-  )
-}
+export default Search

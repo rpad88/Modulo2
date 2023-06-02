@@ -3,4 +3,9 @@ button {
     border-radius: 6px;
     outline: 0;
     border: none;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 2px 2px 1px #888888;
 }

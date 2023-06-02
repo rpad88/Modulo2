@@ -1,32 +1,34 @@
-import './App.css';
-import Header from './components/header';
+import './App.css'
+import Header from './components/Header'
 import googleLogo from './img/googlelogo_color_272x92dp.png'
-import Contador from './components/contador';
-import Btn from './components/btn';
-import Search from './components/search';
+// import Contador from './components/contador';
+import Btn from './components/Btn'
+import Search from './components/Search'
+import Language from './components/language'
 
 function App() {
-
-  function soma(a,b) {
-    return a+b;
-  }
-
+  const lang = "pt-br"
+  
   return (
-    <div className="App">
-      <Header nome="Rodolfo" />
-      <br />
-      <img className='logo' src={googleLogo} alt="imagem do logo do google" />
-      <br />
-      <Search />
-      <br />
-      <div className='btn-pesquisa'>
-        <Btn txt="Pesquisa Google" />
-        <Btn txt="Estou com sorte" />
-      </div>
-      
-      <p>A soma é {soma(2,3)}</p>
-      <Contador />
-    </div>
+		<div className="App">
+			<Header />
+			<img
+				className="logo"
+				src={googleLogo}
+				alt="imagem do logo do google"
+			/>
+			<Search />
+			<div className="btn-pesquisa">
+				<Btn
+					txt={lang === "pt-br" ? Language.BR.btn1 : Language.EN.btn1}
+					prop2={25}
+				/>
+				<Btn
+					txt={lang === "pt-br" ? Language.BR.btn2 : Language.EN.btn2}
+					prop2={30}
+				/>
+			</div>
+		</div>
   );
 }
 

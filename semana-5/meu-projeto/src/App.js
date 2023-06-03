@@ -12,7 +12,7 @@ function App() {
   
   return (
 		<div className="App">
-			<Header setLang={setLang}/>
+			<Header setLang={setLang} name="Rodolfo"/>
 			<img
 				className="logo"
 				src={googleLogo}

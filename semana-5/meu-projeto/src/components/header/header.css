@@ -17,15 +17,15 @@ div.flex {
 }
 
 /* BUTTONS */
-.flex button {
+/* .flex a {
     transition: all .2s ease-in-out;
     
 }
-.flex button:hover {
+.flex a:hover {
     cursor: pointer;
     scale: 0.95;
     box-shadow: 2px 2px 1px #888888;
-}
+} */
 
 .apps-icon:hover,
 .flag:hover {

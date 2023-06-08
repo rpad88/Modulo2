@@ -1,0 +1,36 @@
+header {
+    background-color: #000;
+}
+
+header ul {
+    width: 300px;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Sublinhado em baixo do link */
+a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: #fefefe;
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+/* Animando o sublinhado quando o mouse passa sobre a tag */
+a:hover::after {
+    width: 100%;
+}

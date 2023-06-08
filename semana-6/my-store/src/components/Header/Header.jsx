@@ -15,7 +15,7 @@ export default function Header() {
     ]
 
     const link = navList.map(link => {
-        return (<li><a href={link.route}>{link.label}</a></li>)
+        return (<li className='nav-item'><a href={link.route}>{link.label}</a></li>)
     })
 
   return (

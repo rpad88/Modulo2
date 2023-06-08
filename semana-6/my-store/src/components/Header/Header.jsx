@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className='nav navbar bg-black justify-content-between'>
         <div className="container align-items-center">
-            <h3>My Store</h3>   
+            <h3 className='mostarda'>My Store</h3>   
             <nav className='d-flex justify-content-around'>
                 {navList && link}
             </nav>

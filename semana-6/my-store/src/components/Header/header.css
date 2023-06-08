@@ -1,6 +1,6 @@
-header h3 {
+/* header h3 {
     color: #fb3;
-}
+} */
 
 header nav {
     display: flex;
@@ -22,7 +22,7 @@ header li a:after {
     display: block;
     height: 2px;
     width: 0;
-    background: #fb3;
+    background: #FFBB00;
     margin-top: 4px;
     transition: 0.3s;
     position: absolute;

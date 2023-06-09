@@ -1,5 +1,9 @@
 .img-wrapper {
     position: relative;
+    /* background-image: url('https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1028&q=80'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .img-wrapper .price {
@@ -11,6 +15,11 @@
     top: 15px;
     right: 0;
     border-radius: 5px 0 0 5px;
+}
+
+.row-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .details-wrapper ul {
@@ -34,4 +43,10 @@
     height: 28px;
     background-image: url('../../assets/img/bookmark-15.png');
     background-repeat: no-repeat;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }

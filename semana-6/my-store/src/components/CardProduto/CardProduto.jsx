@@ -56,7 +56,7 @@ export default function CardProduto() {
 											</ul>
 										</div>
 										<div className="btn-wrapper">
-                                            <button type='button' className='btn btn-warning shadow'>MAIS SOBRE</button>
+                                            <button type='button' className='btn btn-outline-warning text-black'>MAIS SOBRE</button>
                                         </div>
 									</div>
 								</div>

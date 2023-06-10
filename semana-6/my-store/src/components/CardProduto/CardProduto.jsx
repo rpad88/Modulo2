@@ -33,7 +33,10 @@ export default function CardProduto() {
             return (
 					<div className="card mt-4 shadow">
 						<div className="row g-0">
-							<div className="col-md-5 img-wrapper" style={{backgroundImage: `url(${produto.imgUrl})`}}>
+							<div
+								className="col-md-5 img-wrapper"
+								style={{ backgroundImage: `url(${produto.imgUrl})` }}
+							>
 								{/* <img
 									src={produto.imgUrl}
 									alt=""
@@ -56,8 +59,13 @@ export default function CardProduto() {
 											</ul>
 										</div>
 										<div className="btn-wrapper">
-                                            <button type='button' className='btn btn-outline-warning text-black'>MAIS SOBRE</button>
-                                        </div>
+											<button
+												type="button"
+												className="btn btn-outline-warning text-black"
+											>
+												MAIS SOBRE
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>

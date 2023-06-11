@@ -1,0 +1,74 @@
+/* cor */
+.texto-branco {
+    color: #f3f3f3;
+}
+
+.texto-cinza {
+    color: #b2b2b2;
+}
+
+/* WRAPPER */
+.footer-wrapper {
+    padding: 10px;
+}
+
+/* CONTATO */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.contato a {
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.contato a:hover {
+    color: #f3f3f3;
+}
+
+.contato hr {
+    display: block;
+    color: #f3f3f3;
+    height: .3px;
+    width: 100%;
+    border-style: inset;
+    opacity: .6;
+}
+
+.contato span {
+    font-size: 14px;
+}
+
+/* SOCIALS */
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+/* INFORMAÇÕES */
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.informacoes a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.informacoes a:hover {
+    color: #f3f3f3;
+}
+
+/* COPYRIGHT */
+.copyright {
+    /* padding: 10px; */
+}
+
+.copyright p {
+    font-size: 12px;
+}

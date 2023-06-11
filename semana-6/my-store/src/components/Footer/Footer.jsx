@@ -7,8 +7,9 @@ import logoYoutube from '../../assets/img/youtube.png'
 export default function Footer() {
   return (
 		<div className="container-fluid footer-wrapper bg-black">
-			<div className="container d-flex">
-				<div className="logo col p-1">
+			<div className="container">
+			<div className="row px-3">
+				<div className="logo col p-0">
 					<h3 className="mostarda">My Store</h3>
 				</div>
 				<div className="contato col p-2 texto-cinza">
@@ -42,6 +43,8 @@ export default function Footer() {
 			</div>
 			<div className="container copyright texto-cinza">
 				<p>My Store Alguns direitos reservados</p>
+			</div>
+
 			</div>
 		</div>
   );

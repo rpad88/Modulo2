@@ -35,13 +35,12 @@ export default function CardProduto() {
 						<div className="row g-0">
 							<div
 								className="col-md-5 img-wrapper"
-								style={{ backgroundImage: `url(${produto.imgUrl})` }}
 							>
-								{/* <img
+								<img
 									src={produto.imgUrl}
-									alt=""
-									className="img-fluid rounded-start"
-								/> */}
+									alt="imagem do produto"
+									className="img-fluid rounded-start w-100 h-100"
+								/>
 								<span className="price">
 									R$ {produto.price.toFixed(2)}
 								</span>

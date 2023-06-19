@@ -21,13 +21,13 @@ function App() {
       <div className="container">
         <h1 className='text-center'>Hello World</h1>
         <Form userList={userList} setUserList={setUserList} />
-        <div className='mt-4 row row-cols-3 gap-0 row-gap-2 p-4'>
+        <ul className='mt-4 row row-cols-3 gap-0 row-gap-2 p-4'>
           {
             userList.map((user) =>{
               return (<Card user={user}/>)
             })
           }
-        </div>
+        </ul>
       </div>
     </div>
   )

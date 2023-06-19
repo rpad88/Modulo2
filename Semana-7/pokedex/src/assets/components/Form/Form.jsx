@@ -2,17 +2,6 @@ import React from 'react'
 import Input from './Input'
 
 export default function Form({userList, setUserList}) {
-  // function printInputValues() {
-  //   const nickname = document.myForm.nickname
-  //   const age = document.myForm.age
-  //   const email = document.myForm.email
-  //   const senha = document.myForm.senha
-  
-  //   console.log("nickname:", nickname.value)
-  //   console.log("age:", age.value)
-  //   console.log("email:", email.value)
-  //   console.log("senha:", senha.value)
-  // }
   
   function formValidation() {
     console.log('formValidation()')
@@ -26,8 +15,7 @@ export default function Form({userList, setUserList}) {
     if(!email.value) return setErrorFor(email, "email cannot be empty")
     if(!senha.value) return setErrorFor(senha, "senha cannot be empty")
   
-    // printInputValues()
-    console.log(nickname.value, age.value, email.value, senha.value)
+    // console.log(nickname.value, age.value, email.value, senha.value)
     return {
             nickname: nickname.value,
             age: age.value,
@@ -49,7 +37,8 @@ export default function Form({userList, setUserList}) {
     try {
       const {nickname, age, email, senha} = formValidation()
       const newUser = {nickname, age, email, senha}
-      console.log(newUser)
+      // console.log(newUser)
+      if(userList.some(user => user.nickname === nickname)) return console.error("Nickname já existe.")      
       setUserList([...userList, newUser])
     } catch (error) {
       console.log(error.message)      

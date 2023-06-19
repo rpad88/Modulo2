@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import './App.css'
 import Form from './assets/components/Form'
 import Header from './assets/components/Header'
+import Card from './assets/components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,15 +18,17 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <h1 className='text-center'>Hello World</h1>
-      <Form userList={userList} setUserList={setUserList} />
-      <ul>
-        {
-          userList.map((user) =>{
-            return <li key={user.nickname}>{user.nickname}</li>
-          })
-        }
-      </ul>
+      <div className="container">
+        <h1 className='text-center'>Hello World</h1>
+        <Form userList={userList} setUserList={setUserList} />
+        <div className='mt-4 row row-cols-3 gap-0 row-gap-2 p-4'>
+          {
+            userList.map((user) =>{
+              return (<Card user={user}/>)
+            })
+          }
+        </div>
+      </div>
     </div>
   )
 }

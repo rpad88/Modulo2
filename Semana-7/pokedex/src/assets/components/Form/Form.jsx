@@ -20,7 +20,8 @@ export default function Form({userList, setUserList}) {
             nickname: nickname.value,
             age: age.value,
             email: email.value,
-            senha: senha.value
+            senha: senha.value,
+            likes: 0
           }
   }
   
@@ -35,8 +36,8 @@ export default function Form({userList, setUserList}) {
   function register(e) {
     e.preventDefault()
     try {
-      const {nickname, age, email, senha} = formValidation()
-      const newUser = {nickname, age, email, senha}
+      const {nickname, ...rest} = formValidation()
+      const newUser = {nickname, ...rest}
       // console.log(newUser)
       if(userList.some(user => user.nickname === nickname)) return console.error("Nickname já existe.")      
       setUserList([...userList, newUser])

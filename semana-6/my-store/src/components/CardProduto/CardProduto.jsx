@@ -29,9 +29,9 @@ export default function CardProduto() {
 
   return (
     <div className='container'>
-        {productsArray.map(produto => {
+        {productsArray.map((produto, index) => {
             return (
-					<div className="card mt-4 shadow">
+					<div className="card mt-4 shadow" key={index}>
 						<div className="row g-0">
 							<div
 								className="col-md-5 img-wrapper"
@@ -52,8 +52,8 @@ export default function CardProduto() {
 									<div className="row-wrapper">
 										<div className="details-wrapper">
 											<ul>
-												{produto.features.map((feature) => (
-													<li>{feature}</li>
+												{produto.features.map((feature, i) => (
+													<li key={i}>{feature}</li>
 												))}
 											</ul>
 										</div>

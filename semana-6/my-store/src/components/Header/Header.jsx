@@ -1,29 +1,17 @@
 import React from 'react'
 import './header.css'
+import MenuComponent from '../MenuComponent/MenuComponent'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
-
-    const navList = [
-        {
-            label: 'Produtos',
-            route: '/produtos'
-        },
-        {
-            label: 'Contato',
-            route: '/contato'
-        }
-    ]
-
-    const link = navList.map(link => {
-        return (<li className='nav-item'><a href={link.route}>{link.label}</a></li>)
-    })
 
   return (
     <header className='nav navbar bg-black justify-content-between'>
         <div className="container align-items-center">
-            <h3 className='mostarda'>My Store</h3>   
+            <Link to={'/'} className='mostarda fs-3 text-decoration-none'>My Store</Link>
+            {/* <h3 className='mostarda' onClick={<Link to={'/'}/>}>My Store</h3>    */}
             <nav className='d-flex justify-content-around'>
-                {navList && link}
+            <MenuComponent />
             </nav>
         </div>
     </header>

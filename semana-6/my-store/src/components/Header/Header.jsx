@@ -9,7 +9,6 @@ export default function Header() {
     <header className='nav navbar bg-black justify-content-between'>
         <div className="container align-items-center">
             <Link to={'/'} className='mostarda fs-3 text-decoration-none'>My Store</Link>
-            {/* <h3 className='mostarda' onClick={<Link to={'/'}/>}>My Store</h3>    */}
             <nav className='d-flex justify-content-around'>
             <MenuComponent />
             </nav>

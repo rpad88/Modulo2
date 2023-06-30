@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './banner.css'
-import { BannerContext } from '../../context/Context'
 
 export default function Banner({title, subTitle}) {
 

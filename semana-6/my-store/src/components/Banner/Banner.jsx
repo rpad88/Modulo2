@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './banner.css'
+import { BannerContext } from '../../context/Context'
 
-export default function Banner(props) {
+export default function Banner({title, subTitle}) {
+
   return (
     <div className='container-fluid banner'>
         <div className='container'>
-            <p className='text-normal'>{props.txt1}</p>
-            <p className='text-big'>{props.txt2}<span className='mostarda'>.</span></p>
+            <p className='text-normal'>{title}</p>
+            <p className='text-big'>{subTitle}<span className='mostarda'>.</span></p>
         </div>
     </div>
   )

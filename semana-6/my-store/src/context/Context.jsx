@@ -13,7 +13,7 @@ export const BannerProvider = ({children}) => {
     const [subTitle, setSubtitle] = useState('')
 
     return (
-        <BannerContext.Provider value={{title, setTitle, subTitle: subTitle, setSubtitle}}>
+        <BannerContext.Provider value={{title, setTitle, subTitle, setSubtitle}}>
             {children}
         </BannerContext.Provider>
     )

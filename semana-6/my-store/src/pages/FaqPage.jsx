@@ -7,8 +7,8 @@ import { BannerContext } from '../context/Context';
 
 export default function FaqPage() {
     const {title, setTitle, subTitle, setSubtitle} = useContext(BannerContext)
-	setTitle("PERGUNTAS FREQUENTES")
-	setSubtitle('veja se sua pergunta já foi respondida')
+	setTitle("DUVIDAS FREQUENTES")
+	setSubtitle('Perguntas frequentes')
 
   return (
 		<>

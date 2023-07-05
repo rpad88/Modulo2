@@ -1,6 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import CardComponent from './components/Card/CardComponent'
 import CardContentComponent from './components/CardContentComponent/CardContentComponent'
+
+import { Container, Alert, Card } from 'react-bootstrap'
+import { AppButton } from './App.style.js'
 
 function App() {
 
@@ -13,9 +17,23 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <CardComponent avatar={user.avatar} neto={<CardContentComponent user={user}/>}/>
-    </div>
+    <>
+      <Container>
+        <CardComponent
+          avatar={user.avatar}
+          neto={<CardContentComponent user={user} />}
+        />
+
+        <CardComponent
+          avatar={user.avatar}
+          neto={<CardContentComponent user={user} />}
+        />
+        <Alert variant="success" className="mt-3">
+          Hello World!
+        </Alert>
+        <AppButton>Clique aqui</AppButton>
+      </Container>
+    </>
   )
 }
 

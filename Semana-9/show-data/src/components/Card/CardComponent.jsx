@@ -1,15 +1,13 @@
 import React from 'react'
 import './cardComponent.css'
+import { Card, CardImg } from 'react-bootstrap';
 
 export default function CardComponent({avatar, neto}) {
   return (
-    <div className="card card-body p-0 pe-2 mt-5">
-      <div className="row">
-        <div className="img-container col p-0">
-          <img src={avatar} alt="" className="img-fluid rounded-start" />
-        </div>
+
+    <Card style={{flexDirection: "row"}} className='mt-5'>
+        <CardImg variant='initial' src={avatar} fluid className='rounded-start' />
         {neto}
-      </div>
-    </div>
-  );
+    </Card>
+  )
 }

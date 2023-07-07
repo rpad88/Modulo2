@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './cardProduto.css'
+import ModalComponent from '../Modal/ModalComponent'
 
 export default function CardProduto() {
-
     const productsArray = [
         {
             imgUrl: "https://images.unsplash.com/photo-1568910748155-01ca989dbdd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -26,6 +26,13 @@ export default function CardProduto() {
             features: ["via satélite", "confiável", "alta velocidade", "portátil"]
           }
     ]
+
+	const [isOpened, setIsOpnened] = useState(false)
+
+	function callModal() {
+		setIsOpnened(!isOpened)
+		
+	}
 
   return (
     <div className='container'>
@@ -59,6 +66,7 @@ export default function CardProduto() {
 										</div>
 										<div className="btn-wrapper">
 											<button
+												onClick={() => callModal}
 												type="button"
 												className="btn btn-outline-warning text-black"
 											>
@@ -69,6 +77,7 @@ export default function CardProduto() {
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				);
         })}

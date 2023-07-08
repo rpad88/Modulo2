@@ -35,7 +35,7 @@ export default function CardProduto({produto}) {
 					</ul>
 				</div>
 				<div className="btn-wrapper">
-					<Button variant='warning'>MAIS SOBRE</Button>
+					<Button variant='outline-warning'>MAIS SOBRE</Button>
 				</div>
 			</div>
         </Card.Body>

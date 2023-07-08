@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
-import SearchIcon from '@mui/icons-material/Search'
+import React, { useEffect, useRef, useState } from 'react'
 import "./faqComponent.css"
 import QuestionComponent from './Question/QuestionComponent'
+import SearchFaqComponent from './SearchFaq/SearchFaqComponent'
 
 export default function FaqComponent() {
 
@@ -24,31 +24,19 @@ export default function FaqComponent() {
     },
   ])
 
+  const [findFaq, setFindFaq] = useState('')
   const [filter, setFilter] = useState(questionList)
-  const findRef = useRef()
 
-  function find() {
-    const question = findRef.current.value
-    const filtered = questionList.filter((q) => q.titulo.includes(question))
+  useEffect(() => {
+    const filtered = questionList.filter((q) => q.titulo.includes(findFaq))
     setFilter(filtered)
-  }
+  },[findFaq])
 
   return (
     <section className="container m-5">
-      <div className="input-group gap-1 mb-3">
-        <input
-          type="text"
-          placeholder="Descreva brevemente sua dúvida"
-          name="searchFaq"
-          id="searchFaq"
-          className="form-control p-2 focus-ring focus-ring-warning"
-          ref={findRef}
-          onBlur={() => setFilter(questionList)}
-        />
-        <button className="btn btn-warning text-white" onClick={find}>
-          <SearchIcon className="icon" />
-        </button>
-      </div>
+
+        {/* Envio o setFindFaq para o filho setar o findFaq no pai */}
+        <SearchFaqComponent setFindFaq={setFindFaq}/>
 
       {filter.map((question) => {
         return (

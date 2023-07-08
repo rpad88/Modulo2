@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import {Modal} from "react-bootstrap"
 import { ModalContext } from '../../context/ModalContext'
 
 export default function ModalComponent() {
@@ -12,7 +13,17 @@ export default function ModalComponent() {
 
   return (
     <>
-      
+      <Modal>
+        <Modal.Header closeButton onClick={handleShow}>
+          <h4>Isso é um Header</h4>
+        </Modal.Header>
+        <Modal.Title className='text-center'>
+          Isso é um título
+        </Modal.Title>
+        <Modal.Body>
+          Body
+        </Modal.Body>
+      </Modal>
     </>
   )
 }

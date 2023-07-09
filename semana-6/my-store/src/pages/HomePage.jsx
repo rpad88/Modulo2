@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import CardProduto from '../components/CardProduto';
@@ -34,16 +34,18 @@ export default function HomePage() {
 
 	// ATUALIZA O BannerContext
 	const { title, setTitle, subTitle, setSubtitle } = useContext(BannerContext)
-	setTitle("ESCOLHA O MELHOR PRA VOCÊ")
-	setSubtitle("nossos produtos" )
+	useEffect(() => {
+    setTitle("ESCOLHA O MELHOR PRA VOCÊ")
+    setSubtitle("nossos produtos" )
+  })
 
   return (
 		<>
 			<Header />
 			<Banner title={title} subTitle={subTitle}/>
 			<Container>
-				{productsArray.map((produto) => {
-					return <CardProduto produto={produto} />
+				{productsArray.map((produto, index) => {
+					return <CardProduto key={index} produto={produto} />
 				})}
 			</Container>
 			<Footer />

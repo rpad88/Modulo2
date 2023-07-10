@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search'
 export default function SearchFaqComponent({ setInputFindFaq }) {
 	const findRef = useRef()
 
-	const handleFindFaq = (e) => {
+	const handleInputFind = (e) => {
 		e.preventDefault()
 		const value = findRef.current.value
 		setInputFindFaq(value)
@@ -13,13 +13,13 @@ export default function SearchFaqComponent({ setInputFindFaq }) {
 
 	return (
 		<>
-			<Form className="mb-4" onSubmit={handleFindFaq}>
+			<Form className="mb-4" onSubmit={handleInputFind}>
 				<InputGroup>
 					<Form.Control
 						placeholder="Descreva brevemente sua dúvida"
 						className="focus-ring focus-ring-warning"
 						ref={findRef}
-						onInput={handleFindFaq}
+						onInput={handleInputFind}
 					/>
 					<Button type="submit" variant="warning">
 						<SearchIcon style={{ color: '#fff' }} />

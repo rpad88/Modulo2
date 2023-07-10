@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { Button, CardImg, Modal } from 'react-bootstrap'
 import { ModalContext } from '../../context/ModalContext'
-import { SpanFeature } from './SpanFeature.style'
+import { BuyButton, SpanFeature } from './Modal.style'
 
 export default function ModalComponent() {
 	const { showModal, setShowModal, data, setData } = useContext(ModalContext)
@@ -58,14 +58,14 @@ export default function ModalComponent() {
 					>
 						Fechar
 					</Button>
-					<Button
+					<BuyButton
 						variant="warning"
 						size="lg"
 						style={{ flexGrow: 1 }}
 						onClick={() => alert('Item adicionado ao carrinho')}
 					>
 						Comprar
-					</Button>
+					</BuyButton>
 				</Modal.Footer>
 			</Modal>
 		</>

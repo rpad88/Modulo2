@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-// import './cardProduto.css'
 import { ModalContext } from '../../context/ModalContext'
 import { Button, Card } from 'react-bootstrap'
 import { CardStyled, ProductDetails } from './Card.style'

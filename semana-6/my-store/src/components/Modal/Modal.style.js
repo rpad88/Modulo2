@@ -17,4 +17,17 @@ export const SpanFeature = styled.span`
     background-image: url(${bookmark});
     background-repeat: no-repeat;
   }
-`;
+`
+
+export const BuyButton = styled.button`
+  font-size: 20px;
+  color: #000;
+  background-color: #FFC107;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: #fb1;
+  }
+
+`

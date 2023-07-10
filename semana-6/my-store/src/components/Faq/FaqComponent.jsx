@@ -24,26 +24,23 @@ export default function FaqComponent() {
     },
   ])
 
-  const [findFaq, setFindFaq] = useState('')
+  const [inputFindFaq, setInputFindFaq] = useState('')
   const [filter, setFilter] = useState(questionList)
 
   useEffect(() => {
-    const filtered = questionList.filter((q) => q.titulo.includes(findFaq))
+    const filtered = questionList.filter((q) => q.titulo.includes(inputFindFaq))
     setFilter(filtered)
-  },[findFaq])
+  },[inputFindFaq])
 
   return (
     <section className="container m-5">
 
-        {/* Envio o setFindFaq para o filho setar o findFaq no pai */}
-        <SearchFaqComponent setFindFaq={setFindFaq}/>
+        {/* Envio o setInputFindFaq para o filho setar o findFaq no pai */}
+        <SearchFaqComponent setInputFindFaq={setInputFindFaq}/>
 
       {filter.map((question) => {
         return (
-          <QuestionComponent
-            titulo={question.titulo}
-            descricao={question.descricao}
-          />
+          <QuestionComponent>{question}</QuestionComponent>
         )
       })}
     </section>

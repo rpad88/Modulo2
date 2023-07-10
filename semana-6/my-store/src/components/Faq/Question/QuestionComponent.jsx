@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function QuestionComponent({titulo, descricao}) {
-
+export default function QuestionComponent({children}) {
+  const {titulo, descricao} = children
 
   return (
     <div className="card mb-2">

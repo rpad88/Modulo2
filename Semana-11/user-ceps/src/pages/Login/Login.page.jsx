@@ -1,7 +1,9 @@
-import React from 'react'
+import FormLoginComponent from '../../components/Form/Login/Login.component'
 
 export default function LoginPage() {
   return (
-    <div>Login page</div>
+    <>
+      <FormLoginComponent />
+    </>
   )
 }

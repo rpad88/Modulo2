@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 import * as Styled from './login.style'
 import { useState } from 'react'
+import InputComponent from '../Form/Input/Input.component'
 
 export default function FormLoginComponent() {
 	const [data, setData] = useState({
 		email: '',
-		password: ''
+		password: '',
 	})
 
 	const isDisabled = () => {
@@ -19,9 +20,9 @@ export default function FormLoginComponent() {
 
 	const handleInput = (event) => {
 		event.preventDefault()
-		const {value, id} = event.target
+		const { value, id } = event.target
 
-		setData({...data, [id]: value})
+		setData({ ...data, [id]: value })
 	}
 
 	// utilizado para redirecionar para uma página
@@ -39,22 +40,23 @@ export default function FormLoginComponent() {
 			</Styled.Header>
 
 			<Styled.InputGroup>
-				<div className="input-group">
-					<label htmlFor="email">E-mail</label>
-					<Styled.Input id="email" type="text" placeholder="Digite seu email" />
-				</div>
-
-				<div className="input-group">
-					<label htmlFor="password">Password</label>
-					<Styled.Input
-						id="password"
-						type="password"
-						placeholder="Digite sua senha"
-					/>
-				</div>
+				<InputComponent
+					id="email"
+					type="email"
+					label="E-mail"
+					placeholder="Type your e-mail"
+				/>
+				<InputComponent
+					id="password"
+					type="password"
+					label="Password"
+					placeholder="Type your password"
+				/>
 			</Styled.InputGroup>
 
-			<Styled.Button type="submit" disabled={isDisabled()}>Entrar</Styled.Button>
+			<Styled.Button type="submit" disabled={isDisabled()}>
+				Entrar
+			</Styled.Button>
 
 			<Styled.Action>
 				<a href="#">Esqueci minha senha</a>

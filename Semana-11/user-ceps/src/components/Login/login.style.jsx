@@ -44,26 +44,13 @@ export const Title = styled.legend`
 
 export const InputGroup = styled.div`
 	display: flex;
-	padding: 10px;
+	padding: .625rem;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: .625rem;
+	width: 100%;
 
-	.input-group {
-		display: flex;
-		width: 360px;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 8px;
-	}
-
-	label {
-		display: flex;
-		align-items: flex-start;
-		gap: 10px;
-		align-self: stretch;
-	}
 `
 
 export const Button = styled.button`
@@ -91,22 +78,6 @@ export const Button = styled.button`
 Button.propTypes = {
     $outlined: PropTypes.bool
 }
-
-export const LabelWrapper = styled.label`
-	display: flex;
-	align-items: flex-start;
-	gap: 10px;
-	align-self: stretch;
-`
-
-export const Input = styled.input`
-	display: flex;
-	padding: 8px;
-	align-items: flex-start;
-	align-self: stretch;
-	border-radius: 5px;
-	border: 1px solid #5281dc;
-`
 
 export const Action = styled.div`
 	display: flex;

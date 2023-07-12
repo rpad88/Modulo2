@@ -1,4 +1,4 @@
-import FormLoginComponent from '../../components/Form/Login/Login.component'
+import FormLoginComponent from '../../components/Login/Login.component'
 import { FormPage } from './Login.style'
 
 export default function LoginPage() {

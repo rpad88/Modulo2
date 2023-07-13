@@ -13,7 +13,9 @@ export const Label = styled.label`
 	align-items: flex-start;
 	gap: 0.625rem;
 	align-self: stretch;
-	color: #5281dc;
+	color: ${({ $color }) => {
+		return $color === 'danger' ? '#BE2E2E' : '#5281dc'
+	}};
 	font-size: 0.75rem;
 	font-style: normal;
 	font-weight: 400;
@@ -26,7 +28,10 @@ export const Input = styled.input`
 	align-items: flex-start;
 	align-self: stretch;
 	border-radius: 0.3125rem;
-	border: 1px solid #5281dc;
+	border: 1px solid
+		${({ $color }) => {
+			return $color === 'danger' ? '#BE2E2E' : '#5281DC'
+		}};
 	width: 100%;
 `
 
@@ -36,7 +41,11 @@ export const TextArea = styled.textarea`
 	align-items: flex-start;
 	align-self: stretch;
 	border-radius: 0.3125rem;
-	border: 1px solid #5281dc;
+	border: 1px solid
+		${({ $color }) => {
+			return $color === 'danger' ? '#BE2E2E' : '#5281DC'
+		}};
+	width: 100%;
 `
 
 export const InputContainer = styled.div`
@@ -45,15 +54,17 @@ export const InputContainer = styled.div`
 `
 
 export const Icon = styled.button`
-    position: absolute;
-    top: .65rem;
-    right: .5rem;
+	position: absolute;
+	top: 0.65rem;
+	right: 0.5rem;
 
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5281dc;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: ${({ $color }) => {
+		return $color === 'danger' ? '#BE2E2E' : '#5281DC'
+	}};
 `

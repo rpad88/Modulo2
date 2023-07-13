@@ -9,6 +9,8 @@ export default function InputComponent({
 	type = 'text',
 	id,
 	placeholder,
+	register,
+	error,
 }) {
 	const [showPassword, setShowPassword] = useState(false)
 
@@ -18,33 +20,46 @@ export default function InputComponent({
 
 	return (
 		<Styled.InputGroup>
-			<Styled.Label htmlFor={id}>{label}</Styled.Label>
+			<Styled.Label $color={error && 'danger'} htmlFor={id}>
+				{label}
+			</Styled.Label>
 
 			{type !== 'textarea' && (
 				<Styled.InputContainer>
 					<Styled.Input
+						$color={error && 'danger'}
 						type={showPassword ? 'text' : type}
 						id={id}
 						placeholder={placeholder}
-						className="Input"
+						{...register}
 					/>
 					{type === 'password' && (
-						<Styled.Icon type='button' onClick={handleShowPassword}>
+						<Styled.Icon
+							$color={error && 'danger'}
+							type="button"
+							onClick={handleShowPassword}
+						>
 							{!showPassword ? <MdVisibility /> : <MdVisibilityOff />}
 						</Styled.Icon>
 					)}
 				</Styled.InputContainer>
 			)}
 			{type === 'textarea' && (
-				<textarea id={id} placeholder={placeholder} className="TextArea" />
+				<Styled.TextArea
+					$color={error && 'danger'}
+					id={id}
+					placeholder={placeholder}
+					{...register}
+				/>
 			)}
 		</Styled.InputGroup>
 	)
 }
 
-InputComponent.PropTypes = {
+InputComponent.propTypes = {
 	label: PropTypes.string,
 	type: PropTypes.string,
 	id: PropTypes.string.isRequired,
 	placeholder: PropTypes.string,
+	register: PropTypes.any,
 }

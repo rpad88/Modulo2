@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "admin@usercep.com",
+            "password": "12345678"
+        },
+        {
+            "id": 2,
+            "email": "usuario@usercep.com",
+            "password": "87654321"
+        }
+    ]
+}

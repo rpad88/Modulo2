@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import * as Styled from './login.style'
 import InputComponent from '../Form/Input/Input.component'
+import { UserService } from '../../services/User/User.service'
 
 export default function FormLoginComponent() {
 	const users = [
@@ -35,7 +36,10 @@ export default function FormLoginComponent() {
 	} = useForm()
 
 	const submitForm = (data) => {
+
+		// UserService.GetUsers()
 		const { email, password } = data
+		UserService.ShowByEmail(email)
 
 		const user = users.find((u) => u.email === email)
 
@@ -55,6 +59,17 @@ export default function FormLoginComponent() {
 
 	const redirectToHome = () => {
 		navigate('/home')
+	}
+
+	const criaUser = () => {
+		UserService.Create({
+			email: 'teste@testando.com',
+			password: "12345123"
+		})
+	}
+
+	const getCEP = () =>{
+		UserService.GetCep('78030030')
 	}
 
 	return (
@@ -103,7 +118,7 @@ export default function FormLoginComponent() {
 
 			<Styled.Action>
 				<a href="#">Esqueci minha senha</a>
-				<Styled.Button $outlined={true} type='button'>Criar conta</Styled.Button>
+				<Styled.Button $outlined={true} type='button' onClick={getCEP}>Criar conta</Styled.Button>
 			</Styled.Action>
 		</Styled.Form>
 	)

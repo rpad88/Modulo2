@@ -1,14 +1,22 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "email": "admin@usercep.com",
-            "password": "12345678"
-        },
-        {
-            "id": 2,
-            "email": "usuario@usercep.com",
-            "password": "87654321"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@usercep.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "email": "usuario@usercep.com",
+      "password": "87654321"
+    },
+    {
+      "id": 3
+    },
+    {
+      "email": "teste@testando.com",
+      "password": "12345123",
+      "id": 4
+    }
+  ]
 }
